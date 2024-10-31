@@ -9,7 +9,7 @@
     <packaging>war</packaging>
 
     <name>Your Web Application</name>
-    <description>A simple web application with React frontend.</description>
+    <description>A simple web application with static files.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -18,17 +18,11 @@
     </properties>
 
     <dependencies>
-        <!-- Add your Java dependencies here if you have a backend -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.5.6</version> <!-- Choose the version you need -->
         </dependency>
     </dependencies>
 
@@ -39,18 +33,10 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <warSourceDirectory>src/main/Web-Project</warSourceDirectory>
-                    <outputDirectory>${project.build.directory}/your-web-app</outputDirectory>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <outputDirectory>C:\Users\SravanKumar\Web-Project/your-web-app/your-web-app</outputDirectory>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <start-class>com.example.YourMainClass</start-class> <!-- Replace with your main class -->
-    </properties>
 </project>
